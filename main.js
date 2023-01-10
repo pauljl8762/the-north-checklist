@@ -2,7 +2,18 @@ let todoContainer = document.querySelector('.todo-container');
 let completedContainer = document.querySelector('.completed-container');
 
 todoContainer.addEventListener('click', function(event) {
-  if (event.target.className === 'complete-button') {
+  if (event.target.className === 'view-full') {
+    let todoItem = event.target.parentNode;
+    let viewFullButton = event.target;
+    if(todoItem.classList.contains('full-size')){
+      todoItem.classList.remove('full-size');
+      viewFullButton.textContent = 'View Full Size';
+    }else{
+    todoItem.classList.add('full-size');
+    viewFullButton.textContent = 'Close';
+    }
+  }
+  else if (event.target.className === 'complete-button') {
     let todoItem = event.target.parentNode;
     let completeButton = event.target;
 
@@ -25,3 +36,5 @@ completedContainer.addEventListener('click', function(event) {
     }
   }
 });
+
+
