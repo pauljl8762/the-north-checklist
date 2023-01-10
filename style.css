@@ -1,0 +1,47 @@
+body {
+  background-image: url(/img/space.img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.todo-container, .completed-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* creates a 3-column grid */
+  grid-gap: 10px; /* adds space between the grid items */
+}
+
+.todo-item {
+  padding: 20px;
+  background-color: transparent /*remove background color*/;
+  border: 6px solid aqua;
+  text-align: center;
+  border-radius: 10px;
+  color: aqua;
+}
+
+
+
+.complete-button {
+  background-color: #4CAF50; /* green */
+  color: white;
+  padding: 12px 20px;
+  border: 10px;
+  cursor: pointer;
+  
+
+}
+
+.complete-button:hover {
+  background-color: #3e8e41; /* dark green */
+  
+}
+
+img {
+  height: 200px;
+  width: 375px;
+}
+
+h1, h2 {
+  text-align: center;
+  color: aqua;
+}
