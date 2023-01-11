@@ -16,11 +16,13 @@ todoContainer.addEventListener('click', function(event) {
   else if (event.target.className === 'complete-button') {
     let todoItem = event.target.parentNode;
     let completeButton = event.target;
-
+    // Get the current index of the todoItem
+    let index = Array.prototype.indexOf.call(todoContainer.children, todoItem);
     if (event.target.textContent === 'Complete') {
       completeButton.textContent = 'Undo';
       todoContainer.removeChild(todoItem);
       completedContainer.appendChild(todoItem);
+     
     }
   }
 });
@@ -29,10 +31,12 @@ completedContainer.addEventListener('click', function(event) {
   if (event.target.className === 'complete-button') {
     let todoItem = event.target.parentNode;
     let completeButton = event.target;
+    // Get the current index of the todoItem
+    let index = Array.prototype.indexOf.call(completedContainer.children, todoItem);
     if(event.target.textContent === 'Undo'){
       completeButton.textContent = 'Complete';
       completedContainer.removeChild(todoItem);
-      todoContainer.appendChild(todoItem);
+      todoContainer.insertBefore(todoItem,todoContainer.children[index]);
     }
   }
 });
