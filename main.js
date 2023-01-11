@@ -36,5 +36,3 @@ completedContainer.addEventListener('click', function(event) {
     }
   }
 });
-
-

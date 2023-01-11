@@ -11,11 +11,14 @@ body {
 }
 
 .todo-item {
-  padding: 20px;
   background-color: transparent; /*remove background color*/
-  border: 6px solid aqua;
   text-align: center;
-  border-radius: 10px;
+  width: 300px; /* set a fixed width */
+  
+  border-radius: 15px; /* increase border radius */
+  padding: 20px; /*add some padding inside the card*/
+  margin: 20px; /*add some margin around the card */
+  box-shadow: 2px 2px 10px aqua; /* add a box shadow */
   color: aqua;
   top: -50px;
   left: -35px;
@@ -41,7 +44,7 @@ body {
   margin: auto;
   width: 80%;
   height: 80%;
-  background-color: rgba(0,0,0,0.8);
+  background-color: black;
   z-index: 99999;
   padding: 20px;
 }
@@ -88,10 +91,28 @@ body {
 
 img {
   height: 200px;
-  width: 375px;
+  width: 200px;
 }
 
 h1, h2 {
   text-align: center;
   color: aqua;
 }
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .todo-container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-row-gap: 15px;
+  }
+}
+
+
+
+
+
+
+
+
