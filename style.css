@@ -97,8 +97,9 @@ img {
 
 
 h1, h2 {
-  text-align: center;
   color: aqua;
+  font-family:  Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
 }
 
 
