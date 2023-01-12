@@ -42,8 +42,8 @@ body {
   bottom: 0;
   right: 0;
   margin: auto;
-  width: 80%;
-  height: 80%;
+  width: 50%;
+  height: 75%;
   background-color: black;
   z-index: 99999;
   padding: 20px;
@@ -111,4 +111,5 @@ h1, h2 {
     grid-template-rows: repeat(3, auto);
     grid-row-gap: 15px;
   }
+  
 }
