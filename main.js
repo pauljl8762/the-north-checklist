@@ -2,7 +2,7 @@ let todoContainer = document.querySelector('.todo-container');
 let completedContainer = document.querySelector('.completed-container');
 
 // Create an HTMLAudioElement
-let completeSound = new Audio('/audio/ding.mp3');
+let completeSound = new Audio('/audio/completed.mp3');
 
 todoContainer.addEventListener('click', function(event) {
   if (event.target.className === 'view-full') {
